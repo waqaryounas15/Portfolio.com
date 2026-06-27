@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Waqar Younas | WordPress Developer Pakistan | UK & PK Projects</title>
+  <meta name="description" content="Muhammad Waqar Younas — WordPress Developer based in Bahawalpur, Pakistan. Specialising in fast, SEO-optimised websites for UK and Pakistani businesses. Available for freelance work." />
+  <meta name="keywords" content="WordPress developer Pakistan, WordPress developer Bahawalpur, freelance web developer Pakistan, WordPress developer for hire UK, WooCommerce developer Pakistan" />
+  <meta name="author" content="Muhammad Waqar Younas" />
+  <meta property="og:title" content="Muhammad Waqar Younas | WordPress Developer" />
+  <meta property="og:description" content="WordPress Developer based in Bahawalpur, Pakistan. Building fast, SEO-ready websites for UK and Pakistani businesses." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --ink: #111318;
+      --ink-soft: #3d4151;
+      --ink-mute: #8891a5;
+      --surface: #f7f8fb;
+      --card: #ffffff;
+      --border: #e4e7ef;
+      --accent: #2563eb;
+      --accent-light: #eff6ff;
+      --accent-glow: rgba(37,99,235,0.13);
+      --green: #059669;
+      --green-bg: #ecfdf5;
+      --purple: #7c3aed;
+      --orange: #ea580c;
+      --radius: 16px;
+      --shadow: 0 2px 18px rgba(17,19,40,0.07);
+      --shadow-lg: 0 10px 40px rgba(17,19,40,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: var(--surface);
+      color: var(--ink);
+      line-height: 1.6;
+      font-size: 16px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 clamp(20px, 5vw, 90px);
+      height: 66px;
+      background: rgba(247,248,251,0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-logo {
+      font-weight: 800; font-size: 1.05rem;
+      color: var(--ink); text-decoration: none;
+      letter-spacing: -0.02em;
+    }
+    .nav-logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 30px; list-style: none; align-items: center; }
+    .nav-links a {
+      text-decoration: none; color: var(--ink-soft);
+      font-size: 0.875rem; font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--accent); }
+    .nav-cta {
+      background: var(--accent); color: #fff;
+      padding: 9px 22px; border-radius: 10px;
+      font-size: 0.875rem; font-weight: 600;
+      text-decoration: none; transition: opacity 0.2s, transform 0.2s;
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .nav-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 130px clamp(20px, 5vw, 90px) 90px;
+      max-width: 1120px; margin: 0 auto;
+      display: grid; grid-template-columns: 1.1fr 0.9fr;
+      gap: 70px; align-items: center;
+    }
+    .hero-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--green-bg); color: var(--green);
+      font-size: 0.78rem; font-weight: 600;
+      padding: 6px 14px; border-radius: 100px;
+      margin-bottom: 22px; letter-spacing: 0.03em;
+    }
+    .hero-badge .dot {
+      width: 7px; height: 7px; border-radius: 50%;
+      background: var(--green); animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0%,100% { opacity:1; transform:scale(1); }
+      50% { opacity:0.4; transform:scale(1.35); }
+    }
+    .hero h1 {
+      font-size: clamp(2.2rem, 4vw, 3.4rem);
+      font-weight: 800; line-height: 1.12;
+      letter-spacing: -0.03em; color: var(--ink);
+      margin-bottom: 18px;
+    }
+    .hero h1 span { color: var(--accent); }
+    .hero p {
+      color: var(--ink-soft); font-size: 1rem; font-weight: 400;
+      line-height: 1.75; margin-bottom: 34px; max-width: 500px;
+    }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--accent); color: #fff;
+      padding: 13px 26px; border-radius: 11px;
+      font-weight: 600; font-size: 0.92rem;
+      text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: 0 4px 22px rgba(37,99,235,0.32);
+    }
+    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(37,99,235,0.42); }
+    .btn-ghost {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff; color: var(--ink);
+      padding: 13px 26px; border-radius: 11px;
+      font-weight: 600; font-size: 0.92rem;
+      text-decoration: none; border: 1.5px solid var(--border);
+      transition: border-color 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow);
+    }
+    .btn-ghost:hover { border-color: #aab; box-shadow: var(--shadow-lg); }
+
+    /* ── AVATAR ── */
+    .hero-visual { display: flex; justify-content: center; align-items: center; }
+    .avatar-outer {
+      position: relative; width: 290px; height: 290px;
+    }
+    .avatar-circle {
+      width: 290px; height: 290px; border-radius: 50%;
+      background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 5rem; font-weight: 800; color: #fff;
+      letter-spacing: -0.04em; font-family: 'Poppins', sans-serif;
+      box-shadow: 0 24px 64px rgba(37,99,235,0.28);
+    }
+    .avatar-pill {
+      position: absolute; bottom: 14px; right: -10px;
+      background: var(--card); border: 1.5px solid var(--border);
+      border-radius: 10px; padding: 8px 14px;
+      font-size: 0.78rem; font-weight: 600; color: var(--ink);
+      box-shadow: var(--shadow); white-space: nowrap;
+    }
+    .avatar-pill span { color: var(--accent); }
+
+    /* ── STATS ── */
+    .stats-wrap {
+      max-width: 1120px; margin: 0 auto 80px;
+      padding: 0 clamp(20px, 5vw, 90px);
+    }
+    .stats-bar {
+      display: grid; grid-template-columns: repeat(4, 1fr);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      overflow: hidden; box-shadow: var(--shadow);
+      gap: 1px; background: var(--border);
+    }
+    .stat-item {
+      background: var(--card); padding: 28px 20px; text-align: center;
+    }
+    .stat-num {
+      font-size: 1.9rem; font-weight: 800; color: var(--ink);
+      letter-spacing: -0.03em; line-height: 1;
+    }
+    .stat-label { font-size: 0.77rem; color: var(--ink-mute); margin-top: 6px; font-weight: 500; }
+
+    /* ── SECTION WRAPPER ── */
+    .section-wrap { max-width: 1120px; margin: 0 auto; padding: 0 clamp(20px,5vw,90px) 90px; }
+    .section-head { text-align: center; margin-bottom: 52px; }
+    .eyebrow {
+      font-size: 0.73rem; font-weight: 700; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
+    }
+    .section-title {
+      font-size: clamp(1.7rem, 2.8vw, 2.3rem);
+      font-weight: 800; color: var(--ink);
+      letter-spacing: -0.025em; margin-bottom: 12px;
+    }
+    .section-sub {
+      color: var(--ink-soft); font-size: 0.97rem; font-weight: 400;
+      max-width: 540px; margin: 0 auto; line-height: 1.75;
+    }
+
+    /* ── PROJECTS ── */
+    .projects-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+    }
+
+    /* SVG thumbnail wrapper */
+    .proj-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      overflow: hidden; position: relative;
+      display: block;
+    }
+    .proj-thumb svg {
+      width: 100%; height: 100%;
+      display: block;
+      position: absolute; top: 0; left: 0;
+    }
+    .proj-live-badge {
+      position: absolute; top: 12px; right: 12px;
+      background: rgba(255,255,255,0.18); color: #fff;
+      font-size: 0.68rem; font-weight: 700; letter-spacing: 0.07em;
+      padding: 4px 10px; border-radius: 6px;
+      backdrop-filter: blur(8px); text-transform: uppercase;
+    }
+
+    .project-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); overflow: hidden;
+      transition: transform 0.22s, box-shadow 0.22s;
+      display: flex; flex-direction: column;
+    }
+    .project-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-lg); }
+    .project-body { padding: 22px 22px 24px; flex: 1; display: flex; flex-direction: column; }
+    .proj-tags { display: flex; gap: 7px; flex-wrap: wrap; margin-bottom: 12px; }
+    .tag {
+      font-size: 0.68rem; font-weight: 700; padding: 3px 9px;
+      border-radius: 100px; letter-spacing: 0.03em;
+    }
+    .t-blue   { background: #eff6ff; color: #1d4ed8; }
+    .t-green  { background: #f0fdf4; color: #15803d; }
+    .t-orange { background: #fff7ed; color: #c2410c; }
+    .t-purple { background: #f5f3ff; color: #6d28d9; }
+    .t-yellow { background: #fefce8; color: #92400e; }
+    .t-pink   { background: #fdf2f8; color: #9d174d; }
+    .proj-title { font-weight: 700; font-size: 1rem; color: var(--ink); margin-bottom: 7px; line-height: 1.3; }
+    .proj-desc { font-size: 0.84rem; color: var(--ink-soft); line-height: 1.65; margin-bottom: 18px; flex: 1; }
+    .proj-link {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 0.84rem; font-weight: 600; color: var(--accent);
+      text-decoration: none; margin-top: auto;
+    }
+    .proj-link:hover { text-decoration: underline; }
+
+    /* ── SKILLS ── */
+    .skills-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    .skill-card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 22px 20px;
+      transition: box-shadow 0.2s, transform 0.2s;
+      text-align: center;
+    }
+    .skill-card:hover { box-shadow: var(--shadow); transform: translateY(-3px); }
+    .skill-icon { font-size: 1.7rem; margin-bottom: 10px; }
+    .skill-name { font-weight: 700; font-size: 0.88rem; color: var(--ink); margin-bottom: 12px; }
+    .skill-bar-bg { background: #eef0f6; border-radius: 100px; height: 5px; overflow: hidden; margin-bottom: 6px; }
+    .skill-bar {
+      height: 100%; border-radius: 100px;
+      background: linear-gradient(90deg, var(--accent), var(--purple));
+    }
+    .skill-pct { font-size: 0.73rem; color: var(--ink-mute); font-weight: 600; }
+
+    /* ── ABOUT ── */
+    .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: start; }
+    .about-text p { color: var(--ink-soft); line-height: 1.8; margin-bottom: 18px; font-size: 0.96rem; }
+    .info-list { list-style: none; display: flex; flex-direction: column; gap: 14px; }
+    .info-list li {
+      display: flex; align-items: center; gap: 14px;
+      font-size: 0.88rem; color: var(--ink-soft);
+    }
+    .ii {
+      width: 38px; height: 38px; border-radius: 9px;
+      background: var(--accent-light); display: flex; align-items: center;
+      justify-content: center; font-size: 1rem; flex-shrink: 0;
+    }
+    .info-list li strong { color: var(--ink); font-weight: 600; display: block; margin-bottom: 1px; }
+
+    /* ── CONTACT ── */
+    .contact-box {
+      background: linear-gradient(135deg, #111318 0%, #1e3269 100%);
+      border-radius: 20px; padding: 60px clamp(30px,6vw,64px);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 52px;
+      align-items: center;
+    }
+    .contact-box h2 {
+      font-size: clamp(1.7rem, 2.8vw, 2.2rem);
+      font-weight: 800; color: #fff;
+      letter-spacing: -0.025em; margin-bottom: 14px;
+    }
+    .contact-box p { color: rgba(255,255,255,0.6); line-height: 1.75; font-size: 0.93rem; }
+    .contact-items { display: flex; flex-direction: column; gap: 14px; }
+    .ci {
+      display: flex; align-items: center; gap: 14px;
+      background: rgba(255,255,255,0.07); border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 12px; padding: 14px 18px;
+      text-decoration: none; transition: background 0.2s;
+    }
+    .ci:hover { background: rgba(255,255,255,0.13); }
+    .ci-icon {
+      width: 40px; height: 40px; border-radius: 9px;
+      background: rgba(255,255,255,0.12);
+      display: flex; align-items: center; justify-content: center; font-size: 1.2rem;
+    }
+    .ci-label { font-size: 0.72rem; color: rgba(255,255,255,0.48); margin-bottom: 3px; }
+    .ci-val { font-size: 0.88rem; font-weight: 600; color: #fff; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 28px clamp(20px, 5vw, 90px);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    footer p { font-size: 0.8rem; color: var(--ink-mute); }
+    .foot-links { display: flex; gap: 22px; }
+    .foot-links a { font-size: 0.8rem; color: var(--ink-mute); text-decoration: none; }
+    .foot-links a:hover { color: var(--accent); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .projects-grid { grid-template-columns: 1fr 1fr; }
+      .skills-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .hero { grid-template-columns: 1fr; text-align: center; gap: 40px; padding-top: 100px; }
+      .hero p { margin: 0 auto 34px; }
+      .hero-actions { justify-content: center; }
+      .hero-visual { order: -1; }
+      .avatar-outer, .avatar-circle { width: 200px; height: 200px; font-size: 3.5rem; }
+      .stats-bar { grid-template-columns: 1fr 1fr; }
+      .projects-grid { grid-template-columns: 1fr; }
+      .skills-grid { grid-template-columns: 1fr 1fr; }
+      .about-grid { grid-template-columns: 1fr; gap: 32px; }
+      .contact-box { grid-template-columns: 1fr; padding: 36px 24px; }
+      .nav-links { display: none; }
+      footer { flex-direction: column; gap: 12px; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Waqar<span>Dev</span></a>
+  <ul class="nav-links">
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="https://wa.me/923086423175?text=Hi%20Waqar!%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20hiring%20you%20for%20a%20WordPress%20project.%20Can%20we%20discuss%3F" class="nav-cta" target="_blank">💬 Hire Me</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-badge"><span class="dot"></span>Available for Freelance Work</div>
+    <h1>WordPress Developer<br/>Built for <span>Real Results</span></h1>
+    <p>I design and develop fast, SEO-optimised WordPress websites for businesses in Pakistan and the UK — from lead-generation landing pages to full WooCommerce stores. Clean code, on-time delivery, measurable outcomes.</p>
+    <div class="hero-actions">
+      <a href="#projects" class="btn-primary">View My Work ↓</a>
+      <a href="https://wa.me/923086423175?text=Hi%20Waqar!%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20hiring%20you%20for%20a%20WordPress%20project.%20Can%20we%20discuss%3F" class="btn-ghost" target="_blank">💬 WhatsApp Me</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="avatar-outer">
+      <div class="avatar-circle">MW</div>
+      <div class="avatar-pill">WordPress Dev · <span>6 months</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-wrap">
+  <div class="stats-bar">
+    <div class="stat-item"><div class="stat-num">5+</div><div class="stat-label">Live Projects</div></div>
+    <div class="stat-item"><div class="stat-num">6mo</div><div class="stat-label">Hands-On Experience</div></div>
+    <div class="stat-item"><div class="stat-num">100%</div><div class="stat-label">Client Satisfaction</div></div>
+    <div class="stat-item"><div class="stat-num">UK+PK</div><div class="stat-label">Markets Served</div></div>
+  </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="section-wrap" id="projects">
+  <div class="section-head">
+    <p class="eyebrow">Portfolio</p>
+    <h2 class="section-title">Projects I've Built</h2>
+    <p class="section-sub">Each site is designed around real business goals — conversions, local SEO, and mobile performance.</p>
+  </div>
+
+  <div class="projects-grid">
+
+    <!-- 1. IPTV UK -->
+    <div class="project-card">
+      <div class="proj-thumb">
+        <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g1bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#060414"/><stop offset="50%" stop-color="#0f0b2e"/><stop offset="100%" stop-color="#1a0e3d"/></linearGradient>
+            <radialGradient id="g1glow" cx="50%" cy="45%" r="45%"><stop offset="0%" stop-color="#4f46e5" stop-opacity="0.4"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+            <linearGradient id="g1screen" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#1a1060"/><stop offset="100%" stop-color="#0a0820"/></linearGradient>
+          </defs>
+          <rect width="800" height="450" fill="url(#g1bg)"/>
+          <rect width="800" height="450" fill="url(#g1glow)"/>
+          <!-- stars -->
+          <circle cx="60" cy="30" r="1.2" fill="#fff" opacity="0.5"/>
+          <circle cx="180" cy="70" r="0.8" fill="#fff" opacity="0.4"/>
+          <circle cx="700" cy="40" r="1" fill="#fff" opacity="0.6"/>
+          <circle cx="750" cy="100" r="1.4" fill="#fff" opacity="0.3"/>
+          <circle cx="90" cy="380" r="1" fill="#fff" opacity="0.4"/>
+          <circle cx="720" cy="400" r="1.2" fill="#fff" opacity="0.5"/>
+          <!-- main TV frame -->
+          <rect x="150" y="60" width="500" height="290" rx="18" fill="#0e0b30" stroke="#4f46e5" stroke-width="2.5"/>
+          <rect x="163" y="73" width="474" height="264" rx="10" fill="url(#g1screen)"/>
+          <!-- screen glow overlay -->
+          <rect x="163" y="73" width="474" height="264" rx="10" fill="#4f46e5" opacity="0.06"/>
+          <!-- nav bar inside screen -->
+          <rect x="163" y="73" width="474" height="36" rx="10" fill="rgba(255,255,255,0.04)"/>
+          <circle cx="190" cy="91" r="8" fill="#4f46e5" opacity="0.9"/>
+          <rect x="210" y="85" width="40" height="12" rx="3" fill="rgba(255,255,255,0.35)"/>
+          <rect x="258" y="85" width="32" height="12" rx="3" fill="rgba(255,255,255,0.18)"/>
+          <rect x="298" y="85" width="36" height="12" rx="3" fill="rgba(255,255,255,0.18)"/>
+          <rect x="342" y="85" width="30" height="12" rx="3" fill="rgba(255,255,255,0.18)"/>
+          <rect x="570" y="81" width="55" height="20" rx="6" fill="#4f46e5"/>
+          <!-- hero section inside screen -->
+          <rect x="178" y="120" width="210" height="22" rx="4" fill="rgba(255,255,255,0.8)"/>
+          <rect x="178" y="150" width="170" height="16" rx="3" fill="rgba(255,255,255,0.5)"/>
+          <rect x="178" y="174" width="140" height="12" rx="3" fill="rgba(255,255,255,0.3)"/>
+          <rect x="178" y="198" width="90" height="26" rx="7" fill="#4f46e5"/>
+          <rect x="276" y="198" width="80" height="26" rx="7" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+          <!-- rating stars row -->
+          <circle cx="180" cy="240" r="4" fill="#facc15" opacity="0.9"/>
+          <circle cx="192" cy="240" r="4" fill="#facc15" opacity="0.9"/>
+          <circle cx="204" cy="240" r="4" fill="#facc15" opacity="0.9"/>
+          <circle cx="216" cy="240" r="4" fill="#facc15" opacity="0.9"/>
+          <circle cx="228" cy="240" r="4" fill="#facc15" opacity="0.7"/>
+          <rect x="238" y="234" width="60" height="12" rx="3" fill="rgba(255,255,255,0.2)"/>
+          <!-- pricing cards right inside screen -->
+          <rect x="420" y="115" width="90" height="100" rx="10" fill="rgba(79,70,229,0.25)" stroke="rgba(99,102,241,0.4)" stroke-width="1.2"/>
+          <rect x="426" y="126" width="78" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
+          <rect x="435" y="148" width="60" height="18" rx="3" fill="rgba(255,255,255,0.7)"/>
+          <rect x="436" y="176" width="58" height="10" rx="3" fill="rgba(165,180,252,0.5)"/>
+          <rect x="436" y="194" width="58" height="14" rx="4" fill="#4f46e5"/>
+          <rect x="522" y="105" width="100" height="115" rx="10" fill="rgba(99,102,241,0.45)" stroke="#6366f1" stroke-width="1.8"/>
+          <rect x="530" y="116" width="82" height="10" rx="3" fill="rgba(255,255,255,0.3)"/>
+          <rect x="537" y="138" width="68" height="20" rx="3" fill="rgba(255,255,255,0.85)"/>
+          <rect x="537" y="168" width="68" height="10" rx="3" fill="rgba(165,180,252,0.5)"/>
+          <rect x="537" y="188" width="68" height="18" rx="5" fill="#4f46e5"/>
+          <!-- stat badges under screen content -->
+          <rect x="178" y="260" width="75" height="22" rx="5" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <rect x="260" y="260" width="75" height="22" rx="5" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <rect x="342" y="260" width="75" height="22" rx="5" fill="rgba(255,255,255,0.07)" stroke="rgba(255,255,255,0.15)" stroke-width="1"/>
+          <!-- TV stand -->
+          <rect x="375" y="350" width="50" height="18" rx="4" fill="#2d2060" stroke="#4f46e5" stroke-width="1.2"/>
+          <rect x="340" y="366" width="120" height="10" rx="5" fill="#1e1650" stroke="#4f46e5" stroke-width="1"/>
+          <!-- signal arc decorations -->
+          <path d="M 70 225 Q 80 205 100 225" fill="none" stroke="#6366f1" stroke-width="2" opacity="0.6"/>
+          <path d="M 55 225 Q 80 190 110 225" fill="none" stroke="#6366f1" stroke-width="1.5" opacity="0.4"/>
+          <path d="M 40 225 Q 80 172 120 225" fill="none" stroke="#6366f1" stroke-width="1" opacity="0.25"/>
+          <circle cx="85" cy="228" r="4" fill="#6366f1" opacity="0.8"/>
+          <!-- floating device icons -->
+          <rect x="680" y="150" width="70" height="50" rx="8" fill="rgba(99,102,241,0.2)" stroke="rgba(165,180,252,0.3)" stroke-width="1"/>
+          <rect x="688" y="158" width="54" height="34" rx="4" fill="rgba(79,70,229,0.3)"/>
+          <circle cx="715" cy="175" r="8" fill="#4f46e5" opacity="0.6"/>
+          <rect x="680" y="220" width="38" height="60" rx="7" fill="rgba(99,102,241,0.2)" stroke="rgba(165,180,252,0.3)" stroke-width="1"/>
+          <rect x="685" y="228" width="28" height="44" rx="3" fill="rgba(79,70,229,0.3)"/>
+          <rect x="689" y="232" width="20" height="36" rx="2" fill="#0f0b2e"/>
+          <!-- bottom light bar -->
+          <rect x="0" y="420" width="800" height="30" fill="rgba(79,70,229,0.08)"/>
+          <rect x="0" y="420" width="800" height="1" fill="rgba(99,102,241,0.3)"/>
+        </svg>
+        <span class="proj-live-badge">Live Site</span>
+      </div>
+      <div class="project-body">
+        <div class="proj-tags">
+          <span class="tag t-blue">WordPress</span>
+          <span class="tag t-purple">Elementor</span>
+          <span class="tag t-pink">SEO</span>
+          <span class="tag t-yellow">UK Market</span>
+        </div>
+        <div class="proj-title">Xtreme IPTV UK — Premium Streaming Site</div>
+        <p class="proj-desc">Full WordPress site for a UK-based IPTV reseller. Dark luxury design, pricing tables, FAQ sections, WhatsApp CTA integration, and on-page SEO targeting high-volume UK keywords like "Best IPTV UK 2026".</p>
+        <a href="https://xtremeiptvuk.shop/" class="proj-link" target="_blank">View Live Site →</a>
+      </div>
+    </div>
+
+    <!-- 2. Kisan Market -->
+    <div class="project-card">
+      <div class="proj-thumb">
+        <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g2sky" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#0c4a2b"/><stop offset="100%" stop-color="#166534"/></linearGradient>
+            <linearGradient id="g2field" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#15803d"/><stop offset="100%" stop-color="#14532d"/></linearGradient>
+            <linearGradient id="g2card" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="rgba(255,255,255,0.14)"/><stop offset="100%" stop-color="rgba(255,255,255,0.04)"/></linearGradient>
+          </defs>
+          <!-- sky -->
+          <rect width="800" height="450" fill="url(#g2sky)"/>
+          <!-- sun glow -->
+          <circle cx="680" cy="80" r="60" fill="#fbbf24" opacity="0.12"/>
+          <circle cx="680" cy="80" r="35" fill="#fbbf24" opacity="0.18"/>
+          <!-- horizon glow -->
+          <rect x="0" y="250" width="800" height="200" fill="url(#g2field)"/>
+          <!-- field rows -->
+          <ellipse cx="400" cy="340" rx="420" ry="55" fill="#166534" opacity="0.6"/>
+          <ellipse cx="400" cy="380" rx="430" ry="60" fill="#14532d" opacity="0.7"/>
+          <!-- wheat stalks full scene — many stalks -->
+          <!-- row 1 background stalks -->
+          <g opacity="0.45">
+            <line x1="30" y1="350" x2="30" y2="180" stroke="#86efac" stroke-width="2"/><ellipse cx="30" cy="180" rx="6" ry="14" fill="#4ade80"/>
+            <line x1="70" y1="355" x2="70" y2="190" stroke="#86efac" stroke-width="2"/><ellipse cx="70" cy="190" rx="5" ry="12" fill="#4ade80"/>
+            <line x1="110" y1="348" x2="110" y2="185" stroke="#86efac" stroke-width="2"/><ellipse cx="110" cy="185" rx="6" ry="13" fill="#4ade80"/>
+            <line x1="150" y1="352" x2="150" y2="192" stroke="#86efac" stroke-width="2"/><ellipse cx="150" cy="192" rx="5" ry="12" fill="#4ade80"/>
+            <line x1="190" y1="345" x2="190" y2="180" stroke="#86efac" stroke-width="2"/><ellipse cx="190" cy="180" rx="6" ry="14" fill="#4ade80"/>
+            <line x1="230" y1="350" x2="230" y2="188" stroke="#86efac" stroke-width="2"/><ellipse cx="230" cy="188" rx="5" ry="12" fill="#4ade80"/>
+            <line x1="270" y1="346" x2="270" y2="183" stroke="#86efac" stroke-width="2"/><ellipse cx="270" cy="183" rx="6" ry="14" fill="#4ade80"/>
+            <line x1="310" y1="352" x2="310" y2="190" stroke="#86efac" stroke-width="2"/><ellipse cx="310" cy="190" rx="5" ry="12" fill="#4ade80"/>
+            <line x1="600" y1="350" x2="600" y2="182" stroke="#86efac" stroke-width="2"/><ellipse cx="600" cy="182" rx="6" ry="14" fill="#4ade80"/>
+            <line x1="640" y1="355" x2="640" y2="190" stroke="#86efac" stroke-width="2"/><ellipse cx="640" cy="190" rx="5" ry="12" fill="#4ade80"/>
+            <line x1="680" y1="348" x2="680" y2="185" stroke="#86efac" stroke-width="2"/><ellipse cx="680" cy="185" rx="6" ry="13" fill="#4ade80"/>
+            <line x1="720" y1="352" x2="720" y2="192" stroke="#86efac" stroke-width="2"/><ellipse cx="720" cy="192" rx="5" ry="12" fill="#4ade80"/>
+            <line x1="760" y1="345" x2="760" y2="180" stroke="#86efac" stroke-width="2"/><ellipse cx="760" cy="180" rx="6" ry="14" fill="#4ade80"/>
+          </g>
+          <!-- foreground tall stalks -->
+          <g opacity="0.85">
+            <line x1="50" y1="430" x2="50" y2="240" stroke="#bbf7d0" stroke-width="3.5"/><ellipse cx="50" cy="240" rx="9" ry="20" fill="#86efac"/>
+            <ellipse cx="38" cy="268" rx="7" ry="14" fill="#86efac" opacity="0.7" transform="rotate(-22,38,268)"/>
+            <ellipse cx="62" cy="268" rx="7" ry="14" fill="#86efac" opacity="0.7" transform="rotate(22,62,268)"/>
+            <line x1="120" y1="435" x2="120" y2="230" stroke="#bbf7d0" stroke-width="3"/><ellipse cx="120" cy="230" rx="8" ry="18" fill="#86efac"/>
+            <ellipse cx="109" cy="260" rx="6" ry="12" fill="#86efac" opacity="0.7" transform="rotate(-20,109,260)"/>
+            <line x1="200" y1="440" x2="200" y2="245" stroke="#bbf7d0" stroke-width="4"/><ellipse cx="200" cy="245" rx="10" ry="22" fill="#4ade80"/>
+            <ellipse cx="185" cy="278" rx="8" ry="16" fill="#86efac" opacity="0.7" transform="rotate(-22,185,278)"/>
+            <ellipse cx="215" cy="278" rx="8" ry="16" fill="#86efac" opacity="0.7" transform="rotate(22,215,278)"/>
+            <line x1="560" y1="440" x2="560" y2="238" stroke="#bbf7d0" stroke-width="3.5"/><ellipse cx="560" cy="238" rx="9" ry="20" fill="#86efac"/>
+            <ellipse cx="548" cy="266" rx="7" ry="14" fill="#86efac" opacity="0.7" transform="rotate(-22,548,266)"/>
+            <line x1="650" y1="435" x2="650" y2="225" stroke="#bbf7d0" stroke-width="4"/><ellipse cx="650" cy="225" rx="10" ry="22" fill="#4ade80"/>
+            <ellipse cx="636" cy="258" rx="8" ry="16" fill="#86efac" opacity="0.7" transform="rotate(-22,636,258)"/>
+            <ellipse cx="664" cy="258" rx="8" ry="16" fill="#86efac" opacity="0.7" transform="rotate(22,664,258)"/>
+            <line x1="750" y1="438" x2="750" y2="242" stroke="#bbf7d0" stroke-width="3"/><ellipse cx="750" cy="242" rx="8" ry="18" fill="#86efac"/>
+          </g>
+          <!-- PRICE TICKER BAR -->
+          <rect x="0" y="60" width="800" height="52" fill="rgba(0,0,0,0.55)"/>
+          <rect x="0" y="60" width="800" height="1.5" fill="rgba(134,239,172,0.4)"/>
+          <rect x="0" y="111" width="800" height="1.5" fill="rgba(134,239,172,0.4)"/>
+          <!-- ticker items (colored rects as price items, no text) -->
+          <rect x="20" y="75" width="12" height="22" rx="2" fill="#4ade80"/>
+          <rect x="42" y="75" width="60" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+          <rect x="42" y="89" width="42" height="8" rx="2" fill="rgba(74,222,128,0.7)"/>
+          <rect x="130" y="75" width="12" height="22" rx="2" fill="#facc15"/>
+          <rect x="152" y="75" width="55" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+          <rect x="152" y="89" width="38" height="8" rx="2" fill="rgba(250,204,21,0.7)"/>
+          <rect x="235" y="75" width="12" height="22" rx="2" fill="#f87171"/>
+          <rect x="257" y="75" width="58" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+          <rect x="257" y="89" width="42" height="8" rx="2" fill="rgba(248,113,113,0.6)"/>
+          <rect x="345" y="75" width="12" height="22" rx="2" fill="#4ade80"/>
+          <rect x="367" y="75" width="52" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+          <rect x="367" y="89" width="36" height="8" rx="2" fill="rgba(74,222,128,0.7)"/>
+          <rect x="450" y="75" width="12" height="22" rx="2" fill="#4ade80"/>
+          <rect x="472" y="75" width="60" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+          <rect x="472" y="89" width="44" height="8" rx="2" fill="rgba(74,222,128,0.7)"/>
+          <rect x="560" y="75" width="12" height="22" rx="2" fill="#facc15"/>
+          <rect x="582" y="75" width="56" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+          <rect x="582" y="89" width="38" height="8" rx="2" fill="rgba(250,204,21,0.6)"/>
+          <rect x="680" y="75" width="12" height="22" rx="2" fill="#4ade80"/>
+          <rect x="702" y="75" width="52" height="10" rx="2" fill="rgba(255,255,255,0.55)"/>
+          <rect x="702" y="89" width="36" height="8" rx="2" fill="rgba(74,222,128,0.7)"/>
+          <!-- HERO CONTENT BOX floating over field -->
+          <rect x="260" y="145" width="280" height="190" rx="16" fill="rgba(5,46,22,0.82)" stroke="rgba(134,239,172,0.3)" stroke-width="1.5"/>
+          <rect x="280" y="165" width="200" height="18" rx="4" fill="rgba(255,255,255,0.75)"/>
+          <rect x="280" y="191" width="160" height="12" rx="3" fill="rgba(255,255,255,0.4)"/>
+          <rect x="280" y="211" width="140" height="12" rx="3" fill="rgba(255,255,255,0.25)"/>
+          <!-- two CTA buttons -->
+          <rect x="280" y="238" width="110" height="32" rx="8" fill="#16a34a"/>
+          <rect x="400" y="238" width="110" height="32" rx="8" fill="rgba(255,255,255,0.1)" stroke="rgba(134,239,172,0.4)" stroke-width="1"/>
+          <!-- stat row inside box -->
+          <rect x="280" y="286" width="70" height="28" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(134,239,172,0.2)" stroke-width="1"/>
+          <rect x="360" y="286" width="70" height="28" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(134,239,172,0.2)" stroke-width="1"/>
+          <rect x="440" y="286" width="70" height="28" rx="6" fill="rgba(255,255,255,0.08)" stroke="rgba(134,239,172,0.2)" stroke-width="1"/>
+          <!-- WhatsApp floating button -->
+          <circle cx="720" cy="340" r="30" fill="#16a34a" opacity="0.95"/>
+          <rect x="706" y="327" width="28" height="6" rx="3" fill="#fff" opacity="0.8"/>
+          <rect x="706" y="337" width="28" height="6" rx="3" fill="#fff" opacity="0.6"/>
+          <rect x="706" y="347" width="18" height="6" rx="3" fill="#fff" opacity="0.4"/>
+        </svg>
+        <span class="proj-live-badge">Live Site</span>
+      </div>
+      <div class="project-body">
+        <div class="proj-tags">
+          <span class="tag t-blue">HTML5</span>
+          <span class="tag t-green">CSS3</span>
+          <span class="tag t-orange">JavaScript</span>
+          <span class="tag t-pink">Bilingual</span>
+        </div>
+        <div class="proj-title">Kisan Market — Crop Trading Platform</div>
+        <p class="proj-desc">Bilingual (Urdu & English) agricultural marketplace with live crop price ticker, WhatsApp-integrated inquiry forms, and transaction records. Targeting farmers across Pakistan.</p>
+        <a href="https://waqaryounas15.github.io/sellcrops/" class="proj-link" target="_blank">View Live Site →</a>
+      </div>
+    </div>
+
+    <!-- 3. PakBakra -->
+    <div class="project-card">
+      <div class="proj-thumb">
+        <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g3bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1c0a02"/><stop offset="60%" stop-color="#431407"/><stop offset="100%" stop-color="#7c2d12"/></linearGradient>
+            <linearGradient id="g3ground" x1="0%" y1="0%" x2="0%" y2="100%"><stop offset="0%" stop-color="#854d0e"/><stop offset="100%" stop-color="#431407"/></linearGradient>
+          </defs>
+          <rect width="800" height="450" fill="url(#g3bg)"/>
+          <!-- warm sky glow -->
+          <ellipse cx="680" cy="80" rx="180" ry="120" fill="#f97316" opacity="0.1"/>
+          <!-- ground -->
+          <rect x="0" y="340" width="800" height="110" fill="url(#g3ground)"/>
+          <rect x="0" y="340" width="800" height="2" fill="rgba(251,191,36,0.2)"/>
+          <!-- NAV BAR -->
+          <rect x="0" y="0" width="800" height="55" fill="rgba(0,0,0,0.6)"/>
+          <circle cx="36" cy="27" r="14" fill="#ea580c" opacity="0.9"/>
+          <rect x="64" y="20" width="50" height="14" rx="4" fill="rgba(255,255,255,0.6)"/>
+          <rect x="124" y="20" width="44" height="14" rx="4" fill="rgba(255,255,255,0.25)"/>
+          <rect x="178" y="20" width="44" height="14" rx="4" fill="rgba(255,255,255,0.25)"/>
+          <rect x="232" y="20" width="44" height="14" rx="4" fill="rgba(255,255,255,0.25)"/>
+          <rect x="286" y="20" width="44" height="14" rx="4" fill="rgba(255,255,255,0.25)"/>
+          <rect x="680" y="14" width="92" height="28" rx="7" fill="#ea580c"/>
+          <!-- HERO LEFT CONTENT -->
+          <rect x="50" y="82" width="300" height="26" rx="5" fill="rgba(255,255,255,0.85)"/>
+          <rect x="50" y="116" width="240" height="18" rx="4" fill="rgba(255,255,255,0.5)"/>
+          <rect x="50" y="142" width="200" height="14" rx="3" fill="rgba(255,255,255,0.3)"/>
+          <!-- trust badges -->
+          <rect x="50" y="168" width="78" height="24" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(251,191,36,0.4)" stroke-width="1"/>
+          <circle cx="65" cy="180" r="5" fill="#4ade80"/>
+          <rect x="140" y="168" width="78" height="24" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(251,191,36,0.4)" stroke-width="1"/>
+          <circle cx="155" cy="180" r="5" fill="#60a5fa"/>
+          <rect x="230" y="168" width="78" height="24" rx="6" fill="rgba(255,255,255,0.1)" stroke="rgba(251,191,36,0.4)" stroke-width="1"/>
+          <circle cx="245" cy="180" r="5" fill="#facc15"/>
+          <!-- CTA buttons -->
+          <rect x="50" y="206" width="130" height="38" rx="10" fill="#ea580c"/>
+          <rect x="192" y="206" width="120" height="38" rx="10" fill="rgba(255,255,255,0.1)" stroke="rgba(255,255,255,0.3)" stroke-width="1.2"/>
+          <!-- GOAT SILHOUETTE — detailed -->
+          <!-- body -->
+          <ellipse cx="480" cy="295" rx="120" ry="80" fill="#92400e" opacity="0.95"/>
+          <!-- neck -->
+          <ellipse cx="390" cy="245" rx="38" ry="52" fill="#92400e" opacity="0.95" transform="rotate(15,390,245)"/>
+          <!-- head -->
+          <ellipse cx="348" cy="195" rx="42" ry="36" fill="#a16207" opacity="0.95"/>
+          <!-- snout -->
+          <ellipse cx="322" cy="208" rx="18" ry="13" fill="#854d0e" opacity="0.9"/>
+          <!-- ear -->
+          <ellipse cx="384" cy="168" rx="12" ry="22" fill="#92400e" opacity="0.9" transform="rotate(-15,384,168)"/>
+          <ellipse cx="348" cy="162" rx="10" ry="20" fill="#a16207" opacity="0.9" transform="rotate(10,348,162)"/>
+          <!-- horns -->
+          <path d="M 370 168 Q 375 140 365 120" fill="none" stroke="#78350f" stroke-width="7" stroke-linecap="round"/>
+          <path d="M 385 163 Q 395 138 390 115" fill="none" stroke="#78350f" stroke-width="7" stroke-linecap="round"/>
+          <!-- eye -->
+          <circle cx="340" cy="192" r="7" fill="#1c0a02"/>
+          <circle cx="342" cy="190" r="2.5" fill="#fff" opacity="0.7"/>
+          <!-- legs -->
+          <rect x="405" y="355" width="22" height="80" rx="10" fill="#92400e" opacity="0.9"/>
+          <rect x="445" y="360" width="22" height="75" rx="10" fill="#78350f" opacity="0.9"/>
+          <rect x="498" y="358" width="22" height="77" rx="10" fill="#92400e" opacity="0.9"/>
+          <rect x="540" y="355" width="22" height="80" rx="10" fill="#78350f" opacity="0.85"/>
+          <!-- tail -->
+          <path d="M 598 265 Q 640 240 630 210" fill="none" stroke="#92400e" stroke-width="12" stroke-linecap="round"/>
+          <!-- PRODUCT CARDS RIGHT -->
+          <rect x="640" y="70" width="140" height="110" rx="12" fill="rgba(0,0,0,0.55)" stroke="rgba(234,88,12,0.4)" stroke-width="1.5"/>
+          <rect x="655" y="84" width="110" height="55" rx="6" fill="rgba(234,88,12,0.15)"/>
+          <circle cx="710" cy="111" r="20" fill="rgba(234,88,12,0.3)"/>
+          <rect x="655" y="148" width="76" height="11" rx="3" fill="rgba(255,255,255,0.65)"/>
+          <rect x="740" y="148" width="30" height="11" rx="3" fill="rgba(234,88,12,0.8)"/>
+          <rect x="640" y="195" width="140" height="110" rx="12" fill="rgba(0,0,0,0.55)" stroke="rgba(234,88,12,0.4)" stroke-width="1.5"/>
+          <rect x="655" y="209" width="110" height="55" rx="6" fill="rgba(234,88,12,0.15)"/>
+          <circle cx="710" cy="236" r="20" fill="rgba(234,88,12,0.3)"/>
+          <rect x="655" y="273" width="76" height="11" rx="3" fill="rgba(255,255,255,0.65)"/>
+          <rect x="740" y="273" width="30" height="11" rx="3" fill="rgba(234,88,12,0.8)"/>
+          <!-- rating stars -->
+          <circle cx="654" cy="316" r="5" fill="#facc15"/>
+          <circle cx="668" cy="316" r="5" fill="#facc15"/>
+          <circle cx="682" cy="316" r="5" fill="#facc15"/>
+          <circle cx="696" cy="316" r="5" fill="#facc15"/>
+          <circle cx="710" cy="316" r="5" fill="#facc15" opacity="0.5"/>
+          <rect x="722" y="309" width="50" height="14" rx="4" fill="rgba(255,255,255,0.25)"/>
+          <!-- WhatsApp badge -->
+          <circle cx="760" cy="410" r="28" fill="#16a34a" opacity="0.95"/>
+          <rect x="748" y="403" width="24" height="5" rx="2.5" fill="#fff" opacity="0.9"/>
+          <rect x="748" y="412" width="24" height="5" rx="2.5" fill="#fff" opacity="0.7"/>
+          <rect x="748" y="421" width="16" height="5" rx="2.5" fill="#fff" opacity="0.5"/>
+        </svg>
+        <span class="proj-live-badge">Live Site</span>
+      </div>
+      <div class="project-body">
+        <div class="proj-tags">
+          <span class="tag t-blue">HTML5</span>
+          <span class="tag t-green">CSS3</span>
+          <span class="tag t-orange">JavaScript</span>
+          <span class="tag t-pink">Local SEO</span>
+        </div>
+        <div class="proj-title">PakBakra — Livestock E-Commerce Site</div>
+        <p class="proj-desc">Premium goat sales website for a Bahawalpur farm. Breed filtering, Eid countdown timer, Google Maps, multi-photo carousel, and a WhatsApp-first purchase flow driving real conversions.</p>
+        <a href="https://waqaryounas15.github.io/Goat/" class="proj-link" target="_blank">View Live Site →</a>
+      </div>
+    </div>
+
+    <!-- 4. Ali Pharma Distribution -->
+    <div class="project-card">
+      <div class="proj-thumb">
+        <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g4bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f0f9ff"/><stop offset="100%" stop-color="#e0f2fe"/></linearGradient>
+            <linearGradient id="g4nav" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#0c4a6e"/><stop offset="100%" stop-color="#0369a1"/></linearGradient>
+            <linearGradient id="g4hero" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0369a1"/><stop offset="100%" stop-color="#0ea5e9"/></linearGradient>
+          </defs>
+          <!-- clean white BG -->
+          <rect width="800" height="450" fill="url(#g4bg)"/>
+          <!-- NAV -->
+          <rect x="0" y="0" width="800" height="58" fill="url(#g4nav)"/>
+          <!-- logo circle -->
+          <circle cx="38" cy="29" r="16" fill="#38bdf8" opacity="0.9"/>
+          <rect x="12" y="24" width="52" height="10" rx="3" fill="#fff" opacity="0.0"/>
+          <!-- cross in logo -->
+          <rect x="34" y="20" width="5" height="18" rx="2" fill="#fff" opacity="0.9"/>
+          <rect x="26" y="27" width="21" height="5" rx="2" fill="#fff" opacity="0.9"/>
+          <!-- nav links -->
+          <rect x="80" y="22" width="48" height="14" rx="4" fill="rgba(255,255,255,0.9)"/>
+          <rect x="140" y="22" width="52" height="14" rx="4" fill="rgba(255,255,255,0.4)"/>
+          <rect x="204" y="22" width="48" height="14" rx="4" fill="rgba(255,255,255,0.4)"/>
+          <rect x="264" y="22" width="52" height="14" rx="4" fill="rgba(255,255,255,0.4)"/>
+          <rect x="328" y="22" width="58" height="14" rx="4" fill="rgba(255,255,255,0.4)"/>
+          <rect x="398" y="22" width="60" height="14" rx="4" fill="rgba(255,255,255,0.4)"/>
+          <rect x="680" y="16" width="100" height="28" rx="7" fill="#38bdf8"/>
+          <!-- HERO SECTION — split layout -->
+          <rect x="0" y="58" width="420" height="230" fill="url(#g4hero)"/>
+          <!-- hero content left -->
+          <rect x="36" y="90" width="280" height="22" rx="5" fill="rgba(255,255,255,0.9)"/>
+          <rect x="36" y="120" width="240" height="18" rx="4" fill="rgba(255,255,255,0.7)"/>
+          <rect x="36" y="146" width="200" height="14" rx="3" fill="rgba(255,255,255,0.45)"/>
+          <rect x="36" y="168" width="180" height="14" rx="3" fill="rgba(255,255,255,0.35)"/>
+          <!-- hero CTAs -->
+          <rect x="36" y="196" width="120" height="34" rx="8" fill="#fff"/>
+          <rect x="168" y="196" width="110" height="34" rx="8" fill="rgba(255,255,255,0.2)" stroke="rgba(255,255,255,0.5)" stroke-width="1.5"/>
+          <!-- hero stat row -->
+          <rect x="36" y="246" width="80" height="28" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          <rect x="126" y="246" width="80" height="28" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          <rect x="216" y="246" width="80" height="28" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          <rect x="306" y="246" width="80" height="28" rx="6" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+          <!-- hero image area right -->
+          <rect x="420" y="58" width="380" height="230" fill="#bae6fd" opacity="0.3"/>
+          <!-- pharmacist / medicine visual -->
+          <!-- large pill capsule -->
+          <ellipse cx="560" cy="150" rx="70" ry="35" fill="#0ea5e9" opacity="0.8"/>
+          <ellipse cx="490" cy="150" rx="35" ry="35" fill="#38bdf8" opacity="0.9"/>
+          <ellipse cx="630" cy="150" rx="35" ry="35" fill="#0369a1" opacity="0.9"/>
+          <!-- small pills scattered -->
+          <ellipse cx="480" cy="220" rx="22" ry="10" fill="#7dd3fc" opacity="0.7"/>
+          <ellipse cx="530" cy="240" rx="18" ry="8" fill="#38bdf8" opacity="0.6"/>
+          <ellipse cx="590" cy="225" rx="22" ry="10" fill="#0ea5e9" opacity="0.7"/>
+          <ellipse cx="650" cy="215" rx="18" ry="8" fill="#7dd3fc" opacity="0.6"/>
+          <ellipse cx="700" cy="240" rx="22" ry="10" fill="#38bdf8" opacity="0.7"/>
+          <!-- cross symbol large -->
+          <rect x="752" y="80" width="22" height="80" rx="8" fill="#0ea5e9" opacity="0.7"/>
+          <rect x="724" y="108" width="78" height="22" rx="8" fill="#0ea5e9" opacity="0.7"/>
+          <!-- SERVICES SECTION -->
+          <rect x="0" y="288" width="800" height="10" fill="rgba(3,105,161,0.08)"/>
+          <rect x="0" y="298" width="800" height="80" fill="#fff"/>
+          <!-- 6 service cards -->
+          <rect x="20" y="308" width="110" height="56" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+          <circle cx="50" cy="328" r="10" fill="#0ea5e9" opacity="0.8"/>
+          <rect x="30" y="345" width="80" height="8" rx="3" fill="#0c4a6e" opacity="0.6"/>
+          <rect x="30" y="357" width="60" height="6" rx="3" fill="#94a3b8" opacity="0.5"/>
+          <rect x="148" y="308" width="110" height="56" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+          <circle cx="178" cy="328" r="10" fill="#0ea5e9" opacity="0.8"/>
+          <rect x="158" y="345" width="80" height="8" rx="3" fill="#0c4a6e" opacity="0.6"/>
+          <rect x="158" y="357" width="60" height="6" rx="3" fill="#94a3b8" opacity="0.5"/>
+          <rect x="276" y="308" width="110" height="56" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+          <circle cx="306" cy="328" r="10" fill="#0ea5e9" opacity="0.8"/>
+          <rect x="286" y="345" width="80" height="8" rx="3" fill="#0c4a6e" opacity="0.6"/>
+          <rect x="286" y="357" width="60" height="6" rx="3" fill="#94a3b8" opacity="0.5"/>
+          <rect x="404" y="308" width="110" height="56" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+          <circle cx="434" cy="328" r="10" fill="#0ea5e9" opacity="0.8"/>
+          <rect x="414" y="345" width="80" height="8" rx="3" fill="#0c4a6e" opacity="0.6"/>
+          <rect x="414" y="357" width="60" height="6" rx="3" fill="#94a3b8" opacity="0.5"/>
+          <rect x="532" y="308" width="110" height="56" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+          <circle cx="562" cy="328" r="10" fill="#0ea5e9" opacity="0.8"/>
+          <rect x="542" y="345" width="80" height="8" rx="3" fill="#0c4a6e" opacity="0.6"/>
+          <rect x="542" y="357" width="60" height="6" rx="3" fill="#94a3b8" opacity="0.5"/>
+          <rect x="660" y="308" width="110" height="56" rx="10" fill="#f0f9ff" stroke="#bae6fd" stroke-width="1.5"/>
+          <circle cx="690" cy="328" r="10" fill="#0ea5e9" opacity="0.8"/>
+          <rect x="670" y="345" width="80" height="8" rx="3" fill="#0c4a6e" opacity="0.6"/>
+          <rect x="670" y="357" width="60" height="6" rx="3" fill="#94a3b8" opacity="0.5"/>
+          <!-- DELIVERY VAN -->
+          <rect x="60" y="388" width="180" height="55" rx="8" fill="#0369a1" opacity="0.85"/>
+          <rect x="238" y="400" width="90" height="43" rx="6" fill="#075985" opacity="0.9"/>
+          <rect x="248" y="408" width="30" height="20" rx="3" fill="#bae6fd" opacity="0.6"/>
+          <rect x="284" y="408" width="30" height="20" rx="3" fill="#bae6fd" opacity="0.5"/>
+          <circle cx="100" cy="443" r="16" fill="#023e63" stroke="#38bdf8" stroke-width="2.5"/>
+          <circle cx="100" cy="443" r="6" fill="#38bdf8" opacity="0.6"/>
+          <circle cx="200" cy="443" r="16" fill="#023e63" stroke="#38bdf8" stroke-width="2.5"/>
+          <circle cx="200" cy="443" r="6" fill="#38bdf8" opacity="0.6"/>
+          <circle cx="280" cy="443" r="16" fill="#023e63" stroke="#38bdf8" stroke-width="2.5"/>
+          <circle cx="280" cy="443" r="6" fill="#38bdf8" opacity="0.6"/>
+          <!-- med cross on van -->
+          <rect x="140" y="398" width="8" height="30" rx="3" fill="#fff" opacity="0.8"/>
+          <rect x="128" y="408" width="32" height="8" rx="3" fill="#fff" opacity="0.8"/>
+          <!-- route dots -->
+          <circle cx="380" cy="420" r="5" fill="#38bdf8" opacity="0.7"/>
+          <circle cx="420" cy="415" r="4" fill="#38bdf8" opacity="0.5"/>
+          <circle cx="460" cy="425" r="5" fill="#38bdf8" opacity="0.7"/>
+          <circle cx="500" cy="418" r="4" fill="#38bdf8" opacity="0.5"/>
+          <circle cx="540" cy="422" r="5" fill="#38bdf8" opacity="0.7"/>
+          <circle cx="580" cy="416" r="4" fill="#38bdf8" opacity="0.5"/>
+          <circle cx="620" cy="424" r="5" fill="#38bdf8" opacity="0.7"/>
+        </svg>
+        <span class="proj-live-badge">Live Site</span>
+      </div>
+      <div class="project-body">
+        <div class="proj-tags">
+          <span class="tag t-blue">WordPress</span>
+          <span class="tag t-purple">Elementor</span>
+          <span class="tag t-pink">SEO</span>
+          <span class="tag t-green">Healthcare</span>
+        </div>
+        <div class="proj-title">Ali Pharma Distribution — Healthcare Website</div>
+        <p class="proj-desc">Professional WordPress site for a pharmaceutical distributor serving Bahawalpur & Lodhran. Multi-page structure with services, products, coverage areas, partner portal, and local SEO targeting healthcare providers across Punjab.</p>
+        <a href="https://alipharmadistribution.com/" class="proj-link" target="_blank">View Live Site →</a>
+      </div>
+    </div>
+
+    <!-- 5. IPTV Landing Pages -->
+    <div class="project-card">
+      <div class="proj-thumb">
+        <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g5bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0d0921"/><stop offset="100%" stop-color="#1e1b4b"/></linearGradient>
+            <radialGradient id="g5glow" cx="60%" cy="40%" r="50%"><stop offset="0%" stop-color="#4f46e5" stop-opacity="0.3"/><stop offset="100%" stop-color="transparent"/></radialGradient>
+          </defs>
+          <rect width="800" height="450" fill="url(#g5bg)"/>
+          <rect width="800" height="450" fill="url(#g5glow)"/>
+          <!-- particle dots -->
+          <circle cx="120" cy="60" r="1.5" fill="#818cf8" opacity="0.5"/>
+          <circle cx="650" cy="90" r="1" fill="#a5b4fc" opacity="0.4"/>
+          <circle cx="740" cy="180" r="1.5" fill="#818cf8" opacity="0.35"/>
+          <circle cx="50" cy="300" r="1" fill="#6366f1" opacity="0.5"/>
+          <circle cx="780" cy="350" r="1.5" fill="#818cf8" opacity="0.4"/>
+          <!-- NAV -->
+          <rect x="0" y="0" width="800" height="56" fill="rgba(0,0,0,0.5)"/>
+          <rect x="0" y="55" width="800" height="1" fill="rgba(99,102,241,0.3)"/>
+          <ellipse cx="38" cy="28" rx="16" ry="16" fill="#4f46e5" opacity="0.9"/>
+          <rect x="72" y="21" width="44" height="14" rx="4" fill="rgba(255,255,255,0.8)"/>
+          <rect x="126" y="21" width="42" height="14" rx="4" fill="rgba(255,255,255,0.3)"/>
+          <rect x="178" y="21" width="44" height="14" rx="4" fill="rgba(255,255,255,0.3)"/>
+          <rect x="232" y="21" width="36" height="14" rx="4" fill="rgba(255,255,255,0.3)"/>
+          <rect x="278" y="21" width="42" height="14" rx="4" fill="rgba(255,255,255,0.3)"/>
+          <rect x="666" y="15" width="116" height="28" rx="7" fill="#4f46e5"/>
+          <!-- HERO SPLIT -->
+          <!-- left content -->
+          <rect x="50" y="85" width="340" height="28" rx="6" fill="rgba(255,255,255,0.85)"/>
+          <rect x="50" y="121" width="280" height="20" rx="5" fill="rgba(255,255,255,0.55)"/>
+          <rect x="50" y="149" width="240" height="16" rx="4" fill="rgba(255,255,255,0.35)"/>
+          <!-- badge row -->
+          <rect x="50" y="178" width="88" height="26" rx="6" fill="rgba(99,102,241,0.25)" stroke="rgba(165,180,252,0.4)" stroke-width="1"/>
+          <circle cx="66" cy="191" r="5" fill="#4ade80"/>
+          <rect x="148" y="178" width="88" height="26" rx="6" fill="rgba(99,102,241,0.25)" stroke="rgba(165,180,252,0.4)" stroke-width="1"/>
+          <circle cx="164" cy="191" r="5" fill="#60a5fa"/>
+          <rect x="246" y="178" width="88" height="26" rx="6" fill="rgba(99,102,241,0.25)" stroke="rgba(165,180,252,0.4)" stroke-width="1"/>
+          <circle cx="262" cy="191" r="5" fill="#facc15"/>
+          <!-- CTA buttons -->
+          <rect x="50" y="218" width="140" height="40" rx="10" fill="#4f46e5"/>
+          <rect x="202" y="218" width="130" height="40" rx="10" fill="rgba(255,255,255,0.08)" stroke="rgba(165,180,252,0.4)" stroke-width="1.5"/>
+          <!-- customer avatars -->
+          <circle cx="52" cy="282" r="16" fill="#312e81" stroke="#4f46e5" stroke-width="2"/>
+          <circle cx="72" cy="282" r="16" fill="#3730a3" stroke="#4f46e5" stroke-width="2"/>
+          <circle cx="92" cy="282" r="16" fill="#4338ca" stroke="#4f46e5" stroke-width="2"/>
+          <circle cx="112" cy="282" r="16" fill="#4f46e5" stroke="#4f46e5" stroke-width="2"/>
+          <rect x="134" y="274" width="80" height="16" rx="4" fill="rgba(165,180,252,0.5)"/>
+          <!-- PRICING CARDS right -->
+          <rect x="440" y="70" width="140" height="180" rx="14" fill="rgba(79,70,229,0.22)" stroke="rgba(99,102,241,0.4)" stroke-width="1.5"/>
+          <rect x="454" y="86" width="112" height="12" rx="4" fill="rgba(255,255,255,0.4)"/>
+          <rect x="454" y="108" width="112" height="26" rx="5" fill="rgba(255,255,255,0.7)"/>
+          <rect x="454" y="144" width="80" height="10" rx="3" fill="rgba(165,180,252,0.5)"/>
+          <rect x="454" y="162" width="112" height="14" rx="4" fill="rgba(165,180,252,0.3)"/>
+          <rect x="454" y="184" width="112" height="14" rx="4" fill="rgba(165,180,252,0.3)"/>
+          <rect x="454" y="216" width="112" height="22" rx="6" fill="#4f46e5"/>
+          <!-- featured pricing card -->
+          <rect x="596" y="52" width="156" height="210" rx="14" fill="rgba(99,102,241,0.5)" stroke="#6366f1" stroke-width="2"/>
+          <rect x="612" y="70" width="124" height="12" rx="4" fill="rgba(255,255,255,0.5)"/>
+          <rect x="612" y="94" width="124" height="30" rx="5" fill="rgba(255,255,255,0.85)"/>
+          <rect x="612" y="134" width="90" height="10" rx="3" fill="rgba(165,180,252,0.6)"/>
+          <rect x="612" y="154" width="124" height="14" rx="4" fill="rgba(165,180,252,0.35)"/>
+          <rect x="612" y="176" width="124" height="14" rx="4" fill="rgba(165,180,252,0.35)"/>
+          <rect x="612" y="198" width="124" height="14" rx="4" fill="rgba(165,180,252,0.35)"/>
+          <rect x="612" y="222" width="124" height="28" rx="8" fill="#4f46e5"/>
+          <!-- best value badge -->
+          <rect x="650" y="44" width="80" height="20" rx="10" fill="#facc15"/>
+          <!-- TRUST BAR -->
+          <rect x="0" y="318" width="800" height="70" fill="rgba(255,255,255,0.04)"/>
+          <rect x="0" y="318" width="800" height="1" fill="rgba(99,102,241,0.2)"/>
+          <rect x="30" y="334" width="150" height="36" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+          <circle cx="60" cy="352" r="10" fill="#4ade80" opacity="0.7"/>
+          <rect x="80" y="346" width="80" height="12" rx="3" fill="rgba(255,255,255,0.5)"/>
+          <rect x="204" y="334" width="150" height="36" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+          <circle cx="234" cy="352" r="10" fill="#60a5fa" opacity="0.7"/>
+          <rect x="254" y="346" width="80" height="12" rx="3" fill="rgba(255,255,255,0.5)"/>
+          <rect x="378" y="334" width="150" height="36" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+          <circle cx="408" cy="352" r="10" fill="#c084fc" opacity="0.7"/>
+          <rect x="428" y="346" width="80" height="12" rx="3" fill="rgba(255,255,255,0.5)"/>
+          <rect x="552" y="334" width="150" height="36" rx="10" fill="rgba(255,255,255,0.06)" stroke="rgba(99,102,241,0.25)" stroke-width="1"/>
+          <circle cx="582" cy="352" r="10" fill="#fb923c" opacity="0.7"/>
+          <rect x="602" y="346" width="80" height="12" rx="3" fill="rgba(255,255,255,0.5)"/>
+          <!-- bottom content -->
+          <rect x="0" y="390" width="800" height="60" fill="rgba(0,0,0,0.3)"/>
+          <rect x="30" y="403" width="200" height="14" rx="4" fill="rgba(255,255,255,0.7)"/>
+          <rect x="30" y="422" width="160" height="12" rx="3" fill="rgba(165,180,252,0.4)"/>
+          <rect x="600" y="405" width="160" height="32" rx="8" fill="#4f46e5"/>
+        </svg>
+        <span class="proj-live-badge">UK Design</span>
+      </div>
+      <div class="project-body">
+        <div class="proj-tags">
+          <span class="tag t-blue">HTML5</span>
+          <span class="tag t-green">CSS3</span>
+          <span class="tag t-orange">JavaScript</span>
+          <span class="tag t-pink">UK SEO</span>
+        </div>
+        <div class="proj-title">IPTV UK Landing Pages — Conversion Design</div>
+        <p class="proj-desc">High-converting landing pages for UK IPTV resellers. Dark luxury design system with scoped CSS tokens, animated heroes, pricing tables, trust badges, and FAQ sections — optimised for UK search rankings.</p>
+        <a href="https://wa.me/923086423175?text=Hi%20Waqar!%20I%27d%20like%20to%20see%20your%20IPTV%20landing%20page%20designs." class="proj-link" target="_blank">Request Demo →</a>
+      </div>
+    </div>
+
+    <!-- 6. WooCommerce Store -->
+    <div class="project-card">
+      <div class="proj-thumb">
+        <svg viewBox="0 0 800 450" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="g6bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#f8fafc"/><stop offset="100%" stop-color="#f1f5f9"/></linearGradient>
+            <linearGradient id="g6nav" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#1e293b"/><stop offset="100%" stop-color="#0f172a"/></linearGradient>
+          </defs>
+          <rect width="800" height="450" fill="url(#g6bg)"/>
+          <!-- NAV -->
+          <rect x="0" y="0" width="800" height="54" fill="url(#g6nav)"/>
+          <circle cx="36" cy="27" r="14" fill="#3b82f6" opacity="0.9"/>
+          <rect x="66" y="20" width="50" height="14" rx="4" fill="rgba(255,255,255,0.75)"/>
+          <rect x="126" y="20" width="50" height="14" rx="4" fill="rgba(255,255,255,0.3)"/>
+          <rect x="186" y="20" width="60" height="14" rx="4" fill="rgba(255,255,255,0.3)"/>
+          <rect x="256" y="20" width="50" height="14" rx="4" fill="rgba(255,255,255,0.3)"/>
+          <!-- cart icon -->
+          <rect x="692" y="16" width="86" height="26" rx="6" fill="#3b82f6"/>
+          <circle cx="726" cy="29" r="8" fill="rgba(255,255,255,0)" stroke="#fff" stroke-width="1.8"/>
+          <path d="M 718 25 L 720 23 L 732 23 L 734 29 L 718 29 Z" fill="#fff" opacity="0.9"/>
+          <circle cx="722" cy="33" r="2.5" fill="#fff"/>
+          <circle cx="730" cy="33" r="2.5" fill="#fff"/>
+          <!-- FILTER SIDEBAR -->
+          <rect x="0" y="54" width="180" height="396" fill="#fff" stroke="#e2e8f0" stroke-width="1"/>
+          <!-- filter sections -->
+          <rect x="16" y="70" width="100" height="12" rx="3" fill="#1e293b" opacity="0.7"/>
+          <rect x="16" y="94" width="140" height="10" rx="3" fill="#64748b" opacity="0.4"/>
+          <rect x="16" y="112" width="120" height="10" rx="3" fill="#64748b" opacity="0.4"/>
+          <rect x="16" y="130" width="130" height="10" rx="3" fill="#64748b" opacity="0.4"/>
+          <rect x="16" y="148" width="110" height="10" rx="3" fill="#64748b" opacity="0.4"/>
+          <rect x="16" y="166" width="1" height="1" rx="0.5" fill="#e2e8f0"/>
+          <rect x="16" y="174" width="100" height="12" rx="3" fill="#1e293b" opacity="0.7"/>
+          <rect x="16" y="196" width="140" height="10" rx="3" fill="#64748b" opacity="0.4"/>
+          <rect x="16" y="214" width="120" height="10" rx="3" fill="#64748b" opacity="0.4"/>
+          <rect x="16" y="232" width="130" height="10" rx="3" fill="#64748b" opacity="0.4"/>
+          <rect x="16" y="252" width="100" height="12" rx="3" fill="#1e293b" opacity="0.7"/>
+          <!-- price slider -->
+          <rect x="16" y="274" width="144" height="4" rx="2" fill="#e2e8f0"/>
+          <rect x="16" y="274" width="90" height="4" rx="2" fill="#3b82f6"/>
+          <circle cx="16" cy="276" r="7" fill="#3b82f6"/>
+          <circle cx="106" cy="276" r="7" fill="#3b82f6"/>
+          <!-- PRODUCT GRID — 3x2 -->
+          <!-- row 1 -->
+          <!-- card 1 -->
+          <rect x="196" y="68" width="180" height="220" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="210" y="82" width="152" height="130" rx="8" fill="#dbeafe"/>
+          <!-- shirt shape -->
+          <polygon points="250,96 258,88 286,88 294,96 282,96 282,140 262,140 262,96" fill="#93c5fd" opacity="0.9"/>
+          <polygon points="250,96 240,104 240,115 250,112 250,96" fill="#60a5fa" opacity="0.9"/>
+          <polygon points="294,96 304,104 304,115 294,112 294,96" fill="#60a5fa" opacity="0.9"/>
+          <rect x="210" y="222" width="100" height="10" rx="3" fill="#1e293b" opacity="0.7"/>
+          <rect x="210" y="238" width="70" height="12" rx="3" fill="#3b82f6" opacity="0.8"/>
+          <rect x="210" y="258" width="152" height="18" rx="6" fill="#3b82f6"/>
+          <!-- card 2 -->
+          <rect x="394" y="68" width="180" height="220" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="408" y="82" width="152" height="130" rx="8" fill="#fce7f3"/>
+          <!-- dupatta/suit shape -->
+          <ellipse cx="484" cy="142" rx="40" ry="50" fill="#f9a8d4" opacity="0.8"/>
+          <ellipse cx="484" cy="115" rx="22" ry="22" fill="#f472b6" opacity="0.9"/>
+          <rect x="470" y="110" width="28" height="55" rx="10" fill="#ec4899" opacity="0.7"/>
+          <rect x="408" y="222" width="100" height="10" rx="3" fill="#1e293b" opacity="0.7"/>
+          <rect x="408" y="238" width="70" height="12" rx="3" fill="#ec4899" opacity="0.8"/>
+          <rect x="408" y="258" width="152" height="18" rx="6" fill="#3b82f6"/>
+          <!-- card 3 -->
+          <rect x="592" y="68" width="180" height="220" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="606" y="82" width="152" height="130" rx="8" fill="#fef3c7"/>
+          <!-- scarf shape -->
+          <path d="M 640 100 Q 672 128 704 100 Q 704 160 672 165 Q 640 160 640 100" fill="#fbbf24" opacity="0.8"/>
+          <path d="M 636 98 Q 672 132 708 98" fill="none" stroke="#f59e0b" stroke-width="3" opacity="0.7"/>
+          <rect x="606" y="222" width="100" height="10" rx="3" fill="#1e293b" opacity="0.7"/>
+          <rect x="606" y="238" width="70" height="12" rx="3" fill="#f59e0b" opacity="0.8"/>
+          <rect x="606" y="258" width="152" height="18" rx="6" fill="#3b82f6"/>
+          <!-- row 2 -->
+          <rect x="196" y="304" width="180" height="132" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="210" y="318" width="152" height="80" rx="8" fill="#f0fdf4"/>
+          <ellipse cx="286" cy="358" rx="35" ry="28" fill="#4ade80" opacity="0.7"/>
+          <rect x="240" y="344" width="92" height="28" rx="10" fill="#22c55e" opacity="0.6"/>
+          <rect x="210" y="408" width="152" height="16" rx="5" fill="#3b82f6"/>
+          <rect x="394" y="304" width="180" height="132" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="408" y="318" width="152" height="80" rx="8" fill="#fef2f2"/>
+          <ellipse cx="484" cy="358" rx="35" ry="28" fill="#fca5a5" opacity="0.7"/>
+          <rect x="438" y="344" width="92" height="28" rx="10" fill="#ef4444" opacity="0.6"/>
+          <rect x="408" y="408" width="152" height="16" rx="5" fill="#3b82f6"/>
+          <rect x="592" y="304" width="180" height="132" rx="12" fill="#fff" stroke="#e2e8f0" stroke-width="1.5"/>
+          <rect x="606" y="318" width="152" height="80" rx="8" fill="#eff6ff"/>
+          <ellipse cx="682" cy="358" rx="35" ry="28" fill="#93c5fd" opacity="0.7"/>
+          <rect x="636" y="344" width="92" height="28" rx="10" fill="#3b82f6" opacity="0.7"/>
+          <rect x="606" y="408" width="152" height="16" rx="5" fill="#3b82f6"/>
+          <!-- CART floating badge -->
+          <rect x="660" y="54" width="130" height="46" rx="10" fill="#fff" stroke="#e2e8f0" stroke-width="1.5" filter="drop-shadow(0 4px 12px rgba(0,0,0,0.1))"/>
+          <circle cx="680" cy="77" r="12" fill="#3b82f6"/>
+          <rect x="672" y="71" width="16" height="12" rx="3" fill="#fff" opacity="0.9"/>
+          <circle cx="676" cy="85" r="2.5" fill="#fff"/>
+          <circle cx="684" cy="85" r="2.5" fill="#fff"/>
+          <rect x="700" y="69" width="72" height="10" rx="3" fill="#1e293b" opacity="0.6"/>
+          <rect x="700" y="83" width="52" height="10" rx="3" fill="#3b82f6" opacity="0.7"/>
+        </svg>
+        <span class="proj-live-badge">WooCommerce</span>
+      </div>
+      <div class="project-body">
+        <div class="proj-tags">
+          <span class="tag t-blue">WordPress</span>
+          <span class="tag t-green">WooCommerce</span>
+          <span class="tag t-orange">CSS3</span>
+          <span class="tag t-yellow">JazzCash</span>
+        </div>
+        <div class="proj-title">Clothing E-Commerce — WooCommerce Store</div>
+        <p class="proj-desc">Full WooCommerce clothing store for a Pakistani retailer. Product catalogue, category filters, JazzCash/EasyPaisa payment integration, and a mobile-first design built for local shoppers.</p>
+        <a href="https://wa.me/923086423175?text=Hi%20Waqar!%20I%27d%20like%20to%20see%20the%20WooCommerce%20clothing%20store%20you%20built." class="proj-link" target="_blank">Request Demo →</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- SKILLS -->
+<div class="section-wrap" id="skills">
+  <div class="section-head">
+    <p class="eyebrow">Expertise</p>
+    <h2 class="section-title">Skills & Capabilities</h2>
+    <p class="section-sub">Core competencies built through real client projects — not just tutorials. Every skill has been deployed in production.</p>
+  </div>
+  <div class="skills-grid">
+    <div class="skill-card">
+      <div class="skill-icon">🔷</div>
+      <div class="skill-name">WordPress Development</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:88%"></div></div>
+      <div class="skill-pct">88% · Themes, Plugins, Elementor</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🌐</div>
+      <div class="skill-name">HTML5 / CSS3</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:90%"></div></div>
+      <div class="skill-pct">90% · Custom Layouts & Animations</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">⚡</div>
+      <div class="skill-name">JavaScript</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:75%"></div></div>
+      <div class="skill-pct">75% · DOM, APIs, Interactivity</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🛒</div>
+      <div class="skill-name">WooCommerce</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:80%"></div></div>
+      <div class="skill-pct">80% · Setup, Products, Payments</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🔍</div>
+      <div class="skill-name">On-Page SEO</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:82%"></div></div>
+      <div class="skill-pct">82% · Meta, Schema, Core Web Vitals</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">💬</div>
+      <div class="skill-name">Client Communication</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:95%"></div></div>
+      <div class="skill-pct">95% · English & Urdu</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">📱</div>
+      <div class="skill-name">Responsive Design</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:87%"></div></div>
+      <div class="skill-pct">87% · Mobile-First Approach</div>
+    </div>
+    <div class="skill-card">
+      <div class="skill-icon">🚀</div>
+      <div class="skill-name">Website Performance</div>
+      <div class="skill-bar-bg"><div class="skill-bar" style="width:78%"></div></div>
+      <div class="skill-pct">78% · Caching, Speed Optimisation</div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section-wrap" id="about">
+  <div class="section-head">
+    <p class="eyebrow">About Me</p>
+    <h2 class="section-title">Muhammad Waqar Younas</h2>
+    <p class="section-sub">WordPress developer with a degree in IT and a hands-on track record of building websites that actually work for businesses.</p>
+  </div>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a WordPress developer based in Bahawalpur, Pakistan, holding a <strong>Bachelor of Science in Information Technology (BSIT)</strong>. Over the past 6 months I've built and delivered production websites for clients in both Pakistan and the UK — from agricultural trading platforms to premium IPTV reseller sites.</p>
+      <p>My focus is always on what matters to the client: fast load times, clean mobile design, local SEO that drives organic traffic, and conversion-oriented layouts that turn visitors into customers.</p>
+      <p>I'm currently available for freelance WordPress projects. Whether you need a business landing page, a WooCommerce store, or a custom plugin — I deliver on time with clear communication throughout.</p>
+    </div>
+    <ul class="info-list">
+      <li><span class="ii">👤</span><div><strong>Muhammad Waqar Younas</strong>Also known as Waqar</div></li>
+      <li><span class="ii">🎓</span><div><strong>BSIT — Bachelor of Science in IT</strong>Information Technology Graduate</div></li>
+      <li><span class="ii">📍</span><div><strong>Bahawalpur, Punjab, Pakistan</strong>Available for remote worldwide</div></li>
+      <li><span class="ii">💼</span><div><strong>6 Months Hands-On Experience</strong>WordPress · WooCommerce · HTML/CSS</div></li>
+      <li><span class="ii">🌍</span><div><strong>UK & Pakistan Markets</strong>Served clients in both regions</div></li>
+      <li><span class="ii">📞</span><div><strong>+92 308 6423175</strong>WhatsApp preferred · Fast response</div></li>
+    </ul>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<div class="section-wrap" id="contact">
+  <div class="contact-box">
+    <div>
+      <h2>Ready to Build Your Website?</h2>
+      <p>I'm available for WordPress websites, WooCommerce stores, landing pages, and custom plugin development. Message me on WhatsApp for the fastest response — I reply within hours.</p>
+    </div>
+    <div class="contact-items">
+      <a href="https://wa.me/923086423175?text=Hi%20Waqar!%20I%20saw%20your%20portfolio%20and%20I%27m%20interested%20in%20hiring%20you%20for%20a%20WordPress%20project.%20Can%20we%20discuss%3F" class="ci" target="_blank">
+        <div class="ci-icon">💬</div>
+        <div><div class="ci-label">WhatsApp (Fastest Response)</div><div class="ci-val">+92 308 6423175</div></div>
+      </a>
+      <a href="https://github.com/waqaryounas15" class="ci" target="_blank">
+        <div class="ci-icon">🐙</div>
+        <div><div class="ci-label">GitHub — View My Code</div><div class="ci-val">github.com/waqaryounas15</div></div>
+      </a>
+      <div class="ci" style="cursor:default;">
+        <div class="ci-icon">📍</div>
+        <div><div class="ci-label">Location</div><div class="ci-val">Bahawalpur, Pakistan · Remote Worldwide</div></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2025 Muhammad Waqar Younas · WordPress Developer · Bahawalpur, Pakistan</p>
+  <div class="foot-links">
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </div>
+</footer>
+
+</body>
+</html>
